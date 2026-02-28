@@ -2,7 +2,7 @@
 
 An end-to-end Business Intelligence project designed to evaluate sales force effectiveness, monitor pipeline health, and analyze global revenue generation.
 
-![CRM Dashboard](dashboard_preview.png)
+![CRM Dashboard](dashboard.png)
 
 ## 🎯 Project Overview
 The objective of this project was to transform raw CRM data into actionable business insights. By engineering a robust ETL pipeline and designing an interactive Power BI dashboard, this solution enables stakeholders to track conversion rates, identify top-performing managers, and analyze revenue trends by industry.

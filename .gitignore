@@ -1,0 +1,13 @@
+# Archivos basura o temporales de Python
+__pycache__/
+*.pyc
+.env
+venv/
+env/
+
+# Archivos del sistema operativo
+.DS_Store
+Thumbs.db
+
+# Ignorar el archivo fantasma sin extensión que creó Power BI por error
+sql/crm_database

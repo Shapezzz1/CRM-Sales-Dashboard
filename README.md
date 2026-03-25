@@ -1,35 +1,28 @@
-# 📊 B2B Sales Pipeline & CRM Performance Dashboard
+# Dashboard de Ventas B2B y Análisis de CRM
 
-An end-to-end Business Intelligence project designed to evaluate sales force effectiveness, monitor pipeline health, and analyze global revenue generation.
+## De qué trata este proyecto
+Básicamente, armé un proyecto de Business Intelligence (End-to-End) para evaluar cómo viene rindiendo la fuerza de ventas y monitorear la salud del pipeline comercial. 
 
-![CRM Dashboard](dashboard.png)
+El problema que resuelve es el clásico de cualquier empresa: transformar datos crudos del CRM en decisiones de negocio reales. En lugar de tener planillas sueltas o datos sucios, este sistema toma la información, la limpia, la guarda de forma estructurada y la muestra en un panel interactivo. Esto le permite a cualquier stakeholder ver tasas de conversión precisas, identificar a los managers que mejor rinden y analizar las tendencias de facturación.
 
-## 🎯 Project Overview
-The objective of this project was to transform raw CRM data into actionable business insights. By engineering a robust ETL pipeline and designing an interactive Power BI dashboard, this solution enables stakeholders to track conversion rates, identify top-performing managers, and analyze revenue trends by industry.
+## Cómo funciona
 
-## 🛠️ Architecture & Tech Stack
-This project simulates a complete Data Analytics workflow:
-* **Data Extraction & Transformation (Python):** Developed a robust ETL script (`etl_pipeline.py`) utilizing `pandas` and `re` for data cleansing, text sanitization, column normalization, and null-value handling.
-* **Data Warehousing (SQLite):** Designed and deployed a relational database optimized with indexing for efficient querying.
-* **Data Modeling & Visualization (Power BI):** Constructed a Star Schema data model connecting the fact table (Sales Pipeline) with dimension tables (Accounts, Products, Teams). Implemented advanced DAX measures for dynamic KPIs.
+El flujo del proyecto simula un entorno de datos profesional y se divide en tres partes:
 
-## 💡 Key Business Insights
-* **Global Win Rate:** The sales team maintains an overall success rate of **48.16%**.
-* **Average Deal Size:** Each closed-won deal brings an average of **$23.61K** in revenue, establishing a clear baseline for future financial projections.
-* **Top Performers:** Rocco Neubert leads the management team with a 52.07% conversion rate, slightly outperforming the 47-49% average of the broader team.
-* **Sales Cycle:** The team takes an average of **51.78 days** to close a deal, highlighting an opportunity to optimize the negotiation ("Engaging") phase.
+1. Data Engineering (ETL con Python): Armé un script que se encarga de la extracción y transformación de datos. Usa Pandas y Expresiones Regulares (Regex) para limpiar el texto, normalizar las columnas y atajar los valores nulos de los archivos crudos.
+2. Data Warehousing (SQLite): Los datos limpios no quedan en el aire, se cargan en una base de datos relacional. La diseñé optimizada con índices para que las consultas vuelen.
+3. Modelado y Visualización (Power BI): Conecté la base de datos a Power BI armando un modelo de Estrella (conectando la tabla de hechos del pipeline con las dimensiones de cuentas, productos y equipos). Sobre eso, metí medidas DAX avanzadas para calcular los KPIs dinámicos.
 
-## 🚀 Dashboard Features
-* **Dynamic KPIs:** Real-time calculation of Total Revenue ($100M+), Win Rate, and Open Opportunities.
-* **Interactive Slicers:** Date ranges, Manager selection, and Product filtering for granular analysis.
-* **UI/UX Design:** Corporate-level layout with clear visual hierarchy, utilizing donut charts for distribution (Deal Stage & Industry) and dual-axis line charts for trend tracking.
+## Stack Tecnológico
 
-## 📂 Repository Structure
-* `/data`: Original raw CSV files (Accounts, Products, Pipeline, Teams).
-* `/script`: Python ETL pipeline script.
-* `crm_database.db`: The finalized SQLite database.
-* `Dashboard_Ventas.pbix`: The interactive Power BI file.
-* `Dashboard_Preview.pdf`: A static export of the dashboard for quick viewing.
+* Lenguaje ETL: Python (Pandas, re)
+* Base de Datos: SQLite
+* Visualización y Modelado: Power BI (DAX, Star Schema)
 
----
-*Note: This is a portfolio project using synthetic CRM data to demonstrate end-to-end data analytics capabilities.*
+## Archivos del repo
+
+* /data: Carpeta con los archivos CSV originales crudos.
+* /script/etl_pipeline.py: El script de Python que hace toda la magia de limpieza y transformación.
+* crm_database.db: La base de datos SQLite ya consolidada y lista para usar.
+* Dashboard_Ventas.pbix: El archivo de Power BI con el panel interactivo.
+* Dashboard_Preview.pdf: Una captura estática por si querés ver cómo quedó el dashboard sin tener que abrir Power BI.
